@@ -56,3 +56,4 @@ jobs:
           publish_branch: data
           publish_dir: ./public
           commit_message: automated data update
+          keep_files: true

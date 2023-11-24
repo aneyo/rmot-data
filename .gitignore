@@ -136,5 +136,8 @@ env.cmd
 state/
 public/
 
+# remove mock files
+mock/
+
 # readme is not ready yet
 /readme.md

@@ -23,14 +23,14 @@ jobs:
       - name: Copy this repo
         uses: actions/checkout@v3
 
-      - name: Copy archived data to public dir
-        run: cp -r ./.history ./public
-
       - name: Copy data branch into public dir
         uses: actions/checkout@v3
         with:
           ref: data
           path: ./public
+          
+      - name: Copy archived data to public dir
+        run: cp -r ./.history ./public
 
       - name: Install pnpm and dependencies
         run: |

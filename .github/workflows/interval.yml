@@ -1,5 +1,4 @@
 name: Interval Updates
-# I HOPE THIS WILL WORK
 
 on:
   workflow_dispatch: {}
@@ -11,8 +10,6 @@ jobs:
     name: Search & update job
     runs-on: ubuntu-latest
 
-    # THIS WAS PRETTY DUMB FROM MY SIDE
-    # I HATE MYSELF
     env:
       OSU_API_KEY: ${{ secrets.OSU_API_KEY }}
       API_WAIT_TIME: ${{ vars.API_WAIT_TIME }}
@@ -32,10 +29,34 @@ jobs:
       - name: Copy archived data to public dir
         run: cp -R ./.history/. ./public
 
-      - name: Install pnpm and dependencies
-        run: |
-          npm install -g pnpm
-          pnpm install
+      # https://github.com/pnpm/action-setup#use-cache-to-reduce-installation-time
+        
+      - name: Install node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 18
+          cache: pnpm
+
+      - name: Install pnpm
+        uses: pnpm/action-setup@v2
+        with:
+          version: 8
+
+      - name: Get pnpm store directory
+        shell: bash
+        run: echo "STORE_PATH=$(pnpm store path --silent)" >> $GITHUB_ENV
+
+      - name: Setup pnpm cache
+        uses: actions/cache@v3
+        with:
+          path: ${{ env.STORE_PATH }}
+          key: ${{ runner.os }}-pnpm-store-${{ hashFiles('**/pnpm-lock.yaml') }}
+          restore-keys: ${{ runner.os }}-pnpm-store-
+
+      - name: Install dependencies
+        run: pnpm install
+
+      # ---------------------------
 
       - name: Start lookup script
         run: node ./tools/lookup.js

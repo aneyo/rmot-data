@@ -16,7 +16,6 @@ jobs:
     env:
       OSU_API_KEY: ${{ secrets.OSU_API_KEY }}
       API_WAIT_TIME: ${{ vars.API_WAIT_TIME }}
-      FORUM_URL: ${{ vars.FORUM_URL }}
       MAX_PAGE_DEPTH: ${{ vars.MAX_PAGE_DEPTH }}
       PAGE_WAIT_TIME: ${{ vars.PAGE_WAIT_TIME }}
 

@@ -2,6 +2,7 @@ import path from "path";
 import { readJSON } from "fs-extra/esm";
 import {
   expectBoolFromString,
+  expectDurationFromString,
   expectNumberFromString,
   expectPathFromString,
   expectString,
@@ -24,14 +25,14 @@ export const ENV_MAX_PAGE_DEPTH = expectNumberFromString(
   3,
 );
 
-export const ENV_API_WAIT_TIME = expectNumberFromString(
+export const ENV_API_WAIT_TIME = expectDurationFromString(
   process.env.API_WAIT_TIME,
-  1_300,
+  "1.3s",
 );
 
-export const ENV_PAGE_WAIT_TIME = expectNumberFromString(
+export const ENV_PAGE_WAIT_TIME = expectDurationFromString(
   process.env.PAGE_WAIT_TIME,
-  5_000,
+  "5s",
 );
 
 export const ENV_PUBLIC_DIR_PATH = expectPathFromString(
@@ -63,7 +64,7 @@ export const ENV_PACKAGE_VERSION = await (async function () {
   }
 })();
 
-export const ENV_POOL_OUTDATED_TIME = expectNumberFromString(
+export const ENV_POOL_OUTDATED_TIME = expectDurationFromString(
   process.env.POOL_OUTDATED_TIME,
-  7 * 24 * 60 * 60_000 /* 7 days */,
+  "7d",
 );

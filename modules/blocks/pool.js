@@ -7,7 +7,19 @@ import {
 } from "../helpers/env.js";
 
 /**
- * @param {{[mod:string]: [string,string,boolean][]}} poolToResolve
+ * @typedef {{
+ *  id: string,
+ *  isSet: boolean,
+ *  pickedBy: string,
+ *  modSlot: string,
+ *  modEnum: OSU_MOD_ENUM
+ * }} UnresolvedMapData [id, isSet, pickedBy, modSlot, modEnum]
+ *
+ * @typedef {{[mod:string]: UnresolvedMapData[]}} UnresolvedPoolData
+ */
+
+/**
+ * @param {UnresolvedPoolData} poolToResolve
  */
 export async function resolvePool(poolToResolve) {
   /** @type {{[mod:string]: Record<string, any>[]}} */
@@ -15,13 +27,15 @@ export async function resolvePool(poolToResolve) {
 
   for (const currentMod in poolToResolve) {
     pool[currentMod] ??= [];
-    const modFlag = resolvePoolModSlot(currentMod);
 
-    for (const [id, pickedBy, isSet] of poolToResolve[currentMod]) {
-      console.log(`${currentMod}:${id}`);
-      const map = await fetchMapData(id, modFlag, isSet);
+    for (const mapMetaData of poolToResolve[currentMod]) {
+      console.log(
+        `${currentMod}:${mapMetaData.isSet ? "s" : "b"}/${mapMetaData.id}`,
+      );
 
-      pool[currentMod].push(resolveMapData(map, id, pickedBy, isSet));
+      const map = await fetchMapData(mapMetaData);
+
+      pool[currentMod].push(resolveMapData(map, mapMetaData));
       if (map == null) console.log("- deleted");
 
       await setTimeout(ENV_USE_DATA_MOCK ? 0 : ENV_API_WAIT_TIME);
@@ -33,36 +47,38 @@ export async function resolvePool(poolToResolve) {
 
 /**
  * @param {Record<string,any>} map
- * @param {string} id
- * @param {string} pickedBy
- * @param {boolean} isSet
+ * @param {UnresolvedMapData} metaData
  */
-function resolveMapData(map, id, pickedBy, isSet) {
+function resolveMapData(map, metaData) {
   const mapData = map ?? {
     deleted: true,
   };
 
-  if (map == null) mapData[isSet ? "beatmapset_id" : "beatmap_id"] = id;
+  if (mapData.deleted)
+    mapData[metaData.isSet ? "beatmapset_id" : "beatmap_id"] = metaData.id;
 
   return {
     ...mapData,
     updated_at: Date.now(),
-    picked_by: pickedBy,
-    was_set_link: isSet,
+    picked_by: metaData.pickedBy,
+    was_set_link: metaData.isSet,
+
+    mod_slot: metaData.modSlot,
+    mod_enum: metaData.modEnum,
   };
 }
 
 /**
- * @param {string} mapID
+ * @param {UnresolvedMapData} mapMeta
  */
-async function fetchMapData(mapID, mod, isSet = false) {
-  const mapData = await fetchMapJsonData(mapID, mod, isSet);
+async function fetchMapData(mapMeta) {
+  const mapData = await fetchMapJsonData(mapMeta);
 
   if (!Array.isArray(mapData) || mapData.length < 1)
     // throw Error("API returned nothing");
     return null; // deleted sets/maps return nothing
 
-  if (isSet)
+  if (mapMeta.isSet)
     return mapData.sort((a, b) => b.difficultyrating - a.difficultyrating)[0];
 
   return mapData[0];
@@ -71,38 +87,77 @@ async function fetchMapData(mapID, mod, isSet = false) {
 /**
  * @param {string} modString
  */
-function resolvePoolModSlot(modString) {
+export function resolveModEnum(modString) {
   if (typeof modString !== "string")
     throw TypeError("Mod string is not a string!!!");
 
   switch (modString.toLowerCase()) {
     case "dt":
-      return OSU_MODS.DoubleTime;
+      return OSU_MOD_ENUM.DoubleTime;
     case "hr":
-      return OSU_MODS.HardRock;
+      return OSU_MOD_ENUM.HardRock;
+    case "hd":
+      return OSU_MOD_ENUM.Hidden;
   }
 
-  // nm, hd & tb
-  // note: api returns 0 difficulty rating for hd mods
-  return OSU_MODS.None;
+  // nm & tb
+  return OSU_MOD_ENUM.None;
 }
 
-// https://github.com/ppy/osu-api/wiki#mods
-const OSU_MODS = {
+/**
+ * https://github.com/ppy/osu-api/wiki#mods
+ * @enum {number}
+ */
+const OSU_MOD_ENUM = {
   None: 0,
+  NoFail: 1,
+  Easy: 2,
+  TouchDevice: 4,
   Hidden: 8,
   HardRock: 16,
+  SuddenDeath: 32,
   DoubleTime: 64,
+  Relax: 128,
+  HalfTime: 256,
+  Nightcore: 512, // Only set along with DoubleTime. i.e: NC only gives 576
+  Flashlight: 1024,
+  Autoplay: 2048,
+  SpunOut: 4096,
+  Relax2: 8192, // Autopilot
+  Perfect: 16384, // Only set along with SuddenDeath. i.e: PF only gives 16416
+  Key4: 32768,
+  Key5: 65536,
+  Key6: 131072,
+  Key7: 262144,
+  Key8: 524288,
+  FadeIn: 1048576,
+  Random: 2097152,
+  Cinema: 4194304,
+  Target: 8388608,
+  Key9: 16777216,
+  KeyCoop: 33554432,
+  Key1: 67108864,
+  Key3: 134217728,
+  Key2: 268435456,
+  ScoreV2: 536870912,
+  Mirror: 1073741824,
 };
 
-async function fetchMapJsonData(id, mods, isSet) {
+/**
+ * @param {UnresolvedMapData} mapMeta
+ */
+async function fetchMapJsonData(mapMeta) {
   if (!ENV_OSU_API_KEY) throw new ReferenceError("OSU_API_KEY is undefined");
 
   const apiURL = new URL("https://osu.ppy.sh/api/get_beatmaps");
   apiURL.searchParams.set("k", ENV_OSU_API_KEY);
   apiURL.searchParams.set("m", "0");
-  apiURL.searchParams.set(isSet ? "s" : "b", id);
-  apiURL.searchParams.set("mods", mods);
+  apiURL.searchParams.set(mapMeta.isSet ? "s" : "b", mapMeta.id);
+  apiURL.searchParams.set(
+    "mods",
+    // ! api returns 0 difficulty rating for hd mods
+    mapMeta.modEnum === OSU_MOD_ENUM.Hidden ? "0" : mapMeta.modEnum.toString(),
+  );
 
   const apiRequest = await fetch(apiURL);
 
@@ -133,7 +188,7 @@ export function resolveModName(modName) {
 }
 
 /**
- * @param {{[mod:string]: [string,string,boolean][]}} poolToCount
+ * @param {UnresolvedPoolData} poolToCount
  */
 export function countPoolMaps(poolToCount) {
   let count = 0;
@@ -144,7 +199,6 @@ export function countPoolMaps(poolToCount) {
 }
 
 /**
- *
  * @param {{[mod:string]: Record<string, any>[]}} pool
  */
 export function generateMetaPool(pool) {
@@ -152,11 +206,12 @@ export function generateMetaPool(pool) {
     Object.entries(pool).map(([mod, maps]) => [
       mod,
       maps.map((map) => ({
-        mod,
         id: map.beatmap_id,
         set: map.beatmapset_id,
         deleted: !!map.deleted,
         pickedBy: map.picked_by,
+        modSlot: mod,
+        modEnum: map.mod_enum,
       })),
     ]),
   );
@@ -164,17 +219,25 @@ export function generateMetaPool(pool) {
 
 /**
  * @param {{[mod:string]: Record<string,any>[]}} resolvedPool
- * @returns {{[mod:string]: [string,string,boolean][]}}
+ * @returns {UnresolvedPoolData}
  */
 export function convertPoolToUnresolved(resolvedPool) {
   return Object.fromEntries(
     Object.entries(resolvedPool).map(([mod, maps]) => [
       mod,
-      maps.map((map) => [
-        map.deleted && map.was_set_link ? map.beatmapset_id : map.beatmap_id,
-        map.picked_by,
-        map.was_set_link,
-      ]),
+      maps.map(
+        (map) =>
+          /** @type {UnresolvedMapData} */ ({
+            id:
+              map.deleted && map.was_set_link
+                ? map.beatmapset_id
+                : map.beatmap_id,
+            isSet: map.was_set_link,
+            pickedBy: map.picked_by,
+            modSlot: map.mod_slot,
+            modEnum: map.mod_enum,
+          }),
+      ),
     ]),
   );
 }

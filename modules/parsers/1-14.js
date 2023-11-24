@@ -7,7 +7,7 @@ import { convertRankNames } from "../blocks/ranks.js";
 import { resolvePostLinks } from "../blocks/links.js";
 import { parseSchedule } from "../blocks/schedule.js";
 import { resolveMapID, resolveSetID } from "../helpers/map.js";
-import { resolveModName } from "../blocks/pool.js";
+import { resolveModEnum, resolveModName } from "../blocks/pool.js";
 
 const mainSelector =
   ".forum-post:first > .forum-post__body > .forum-post__content .bbcode ";
@@ -39,7 +39,7 @@ export async function parse1to14TemplateData(page) {
     mainSelector + ".bbcode-spoilerbox__body:nth(3)",
   ).find("a, u, a + *");
 
-  /** @type {{[mod:string]: [string,string,boolean][]}} */
+  /** @type {import("../blocks/pool.js").UnresolvedPoolData} */
   const poolToResolve = {};
   let currentMod = "nm";
 
@@ -70,14 +70,20 @@ export async function parse1to14TemplateData(page) {
 
       const mapID = resolveMapID(item.attribs.href);
       const beatID = mapID ?? resolveSetID(item.attribs.href);
+
       if (beatID != null)
-        poolToResolve[currentMod].push([
-          beatID,
-          // 1-4 does not have any map selectors visible
-          selectorMatch?.groups?.selector ?? "Redavor",
-          // resolve by set instead (thank you for using set links)
-          mapID == null,
-        ]);
+        poolToResolve[currentMod].push({
+          id: beatID,
+          isSet: mapID == null, // will resolve map from set id if is true
+          // #1-4 does not have any map selectors visible
+          pickedBy: selectorMatch?.groups?.selector ?? "Redavor",
+          modEnum: resolveModEnum(currentMod),
+          modSlot: currentMod,
+        });
+      else
+        console.warn(
+          `cannot get id from: ${currentMod} > ${item.attribs.href}`,
+        );
     }
   }
 

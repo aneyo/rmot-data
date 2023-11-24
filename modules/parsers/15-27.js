@@ -1,7 +1,7 @@
 import { MAP_SELECTOR_MATCH } from "../helpers/match.js";
 import { parseSchedule } from "../blocks/schedule.js";
 import { resolveMapID, resolveSetID } from "../helpers/map.js";
-import { resolveModName } from "../blocks/pool.js";
+import { resolveModEnum, resolveModName } from "../blocks/pool.js";
 import {
   parse1to14BannerBlock,
   parse1to14LinksBlock,
@@ -49,7 +49,7 @@ export async function parse15to27TemplateData(page) {
     "a, u, a + *",
   );
 
-  /** @type {{[mod:string]: [string,string,boolean][]}} */
+  /** @type {import("../blocks/pool.js").UnresolvedPoolData} */
   const poolToResolve = {};
   let currentMod = "nm";
 
@@ -80,12 +80,19 @@ export async function parse15to27TemplateData(page) {
 
       const mapID = resolveMapID(item.attribs.href);
       const beatID = mapID ?? resolveSetID(item.attribs.href);
+
       if (beatID != null)
-        poolToResolve[currentMod].push([
-          beatID,
-          selectorMatch?.groups?.selector ?? "Redavor",
-          mapID == null,
-        ]);
+        poolToResolve[currentMod].push({
+          id: beatID,
+          isSet: mapID == null, // will resolve map from set id if is true
+          pickedBy: selectorMatch?.groups?.selector ?? "Redavor",
+          modEnum: resolveModEnum(currentMod),
+          modSlot: currentMod,
+        });
+      else
+        console.warn(
+          `cannot get id from: ${currentMod} > ${item.attribs.href}`,
+        );
     }
   }
 

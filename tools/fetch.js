@@ -138,6 +138,7 @@ for (let i = 0; i < lookupData.length; i++) {
     const pool = {
       ver: ENV_PACKAGE_VERSION,
       updated: Date.now(),
+      forumID: tournament.forumID,
       pool: await resolvePool(poolLookup),
     };
 

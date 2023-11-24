@@ -30,7 +30,7 @@ jobs:
           path: ./public
           
       - name: Copy archived data to public dir
-        run: cp -r ./.history ./public
+        run: cp -R ./.history/. ./public
 
       - name: Install pnpm and dependencies
         run: |

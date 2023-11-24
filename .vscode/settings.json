@@ -1,0 +1,11 @@
+{
+  "javascript.preferences.importModuleSpecifierEnding": "js",
+  "javascript.preferences.quoteStyle": "double",
+  "javascript.updateImportsOnFileMove.enabled": "always",
+  "[javascript]": {
+    "editor.defaultFormatter": "dbaeumer.vscode-eslint",
+    "togglequotes.chars": ["\"", "`"]
+  },
+  "cSpell.words": ["RMOT"],
+  "js/ts.implicitProjectConfig.checkJs": true
+}

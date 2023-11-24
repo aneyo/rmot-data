@@ -1,0 +1,59 @@
+name: Interval Updates
+# I HOPE THIS WILL WORK
+
+on:
+  workflow_dispatch: {}
+  schedule:
+    - cron: "0 */2 * * *"
+
+jobs:
+  main:
+    name: Search & update job
+    runs-on: ubuntu-latest
+
+    # THIS WAS PRETTY DUMB FROM MY SIDE
+    # I HATE MYSELF
+    env:
+      OSU_API_KEY: ${{ secrets.OSU_API_KEY }}
+      API_WAIT_TIME: ${{ vars.API_WAIT_TIME }}
+      FORUM_URL: ${{ vars.FORUM_URL }}
+      MAX_PAGE_DEPTH: ${{ vars.MAX_PAGE_DEPTH }}
+      PAGE_WAIT_TIME: ${{ vars.PAGE_WAIT_TIME }}
+
+    steps:
+      - name: Copy this repo
+        uses: actions/checkout@v3
+
+      - name: Copy archived data to public dir
+        run: cp -r ./.history ./public
+
+      - name: Copy data branch into public dir
+        uses: actions/checkout@v3
+        with:
+          ref: data
+          path: ./public
+
+      - name: Install pnpm and dependencies
+        run: |
+          npm install -g pnpm
+          pnpm install
+
+      - name: Start lookup script
+        run: node ./tools/lookup.js
+
+      - name: Start fetch script
+        run: node ./tools/fetch.js
+
+      - name: Generate metadata
+        run: node ./tools/generate/meta.js
+
+      - name: Generate readme file
+        run: node ./tools/generate/readme.js
+
+      - name: Deploy data
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_branch: data
+          publish_dir: ./public
+          commit_message: automated data update

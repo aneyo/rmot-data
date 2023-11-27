@@ -1,20 +1,20 @@
-# Rapid Monthly osu! Tournament #87 1v1 30k-70k
+# Rapid Monthly osu! Tournament #88 1v1 30k-70k
 
-> tournament data updated @ `Fri, 24 Nov 2023 18:51:40 UTC`  
-> pool data updated @ `Fri, 24 Nov 2023 18:51:40 UTC`
+> tournament data updated @ `Mon, 27 Nov 2023 16:23:03 UTC`  
+> pool data updated @ `Mon, 27 Nov 2023 16:23:03 UTC`
 
 ## Links
 
-[**Forum Post**](https://osu.ppy.sh/community/forums/topics/1845106) | [**Discord Server**](https://discord.gg/9sKe7nF) | [**Stream**](https://www.twitch.tv/rapid_tournaments) | [**Bracket**](https://challonge.com/rmosutourney87)
+[**Forum Post**](https://osu.ppy.sh/community/forums/topics/1850454) | [**Discord Server**](https://discord.gg/9sKe7nF) | [**Stream**](https://www.twitch.tv/rapid_tournaments) | [**Bracket**](https://challonge.com/rmosutourney88)
 
 ## Schedule
 
 ### [**Check current UTC/GMT time**](https://www.utctime.net)
 
-- `Tue, 14 Nov 2023 11:45:59 UTC` - registration start
-- `Fri, 24 Nov 2023 22:00:00 UTC` - registration end
-- `Sat, 25 Nov 2023 14:50:00 UTC` - bracket shuffle
-- `Sat, 25 Nov 2023 15:00:00 UTC` - start of the tournament
+- `Mon, 27 Nov 2023 14:36:12 UTC` - registration start
+- `Fri, 08 Dec 2023 22:00:00 UTC` - registration end
+- `Sat, 09 Dec 2023 14:50:00 UTC` - bracket shuffle
+- `Sat, 09 Dec 2023 15:00:00 UTC` - start of the tournament
 - _add ~30 minutes to each round after that_
 
 
@@ -30,30 +30,30 @@
 ---
 
 
-> `NM1` - [ZETTAI ZETSUMEI - Co shu Nie [Gill&#39;s Another]](https://osu.ppy.sh/beatmapset/908973) - `1907437` ~ [**osu!direct**](osu://b/1907437)
+> `NM1` - [Gusha - Chata [Collab Lunatic]](https://osu.ppy.sh/beatmapset/1861782) - `3828042` ~ [**osu!direct**](osu://b/3828042)
 
-- [BeatConnect](https://beatconnect.io/b/908973) • [NeriNyan](https://api.nerinyan.moe/d/908973) • [Chimu.moe](https://api.chimu.moe/v1/download/908973)
-
-```
-!mp map 1907437
-```
-
-
-> `NM2` - [Outsider - yanaginagi [Extra]](https://osu.ppy.sh/beatmapset/1616670) - `3301006` ~ [**osu!direct**](osu://b/3301006)
-
-- [BeatConnect](https://beatconnect.io/b/1616670) • [NeriNyan](https://api.nerinyan.moe/d/1616670) • [Chimu.moe](https://api.chimu.moe/v1/download/1616670)
+- [BeatConnect](https://beatconnect.io/b/1861782) • [NeriNyan](https://api.nerinyan.moe/d/1861782) • [Chimu.moe](https://api.chimu.moe/v1/download/1861782)
 
 ```
-!mp map 3301006
+!mp map 3828042
 ```
 
 
-> `NM3` - [Sorochinskaya Yarmarka - Zmey Gorynich [Daiyousei&#39;s Extra]](https://osu.ppy.sh/beatmapset/1191853) - `2540064` ~ [**osu!direct**](osu://b/2540064)
+> `NM2` - [re[in]flaw - MYUKKE. [toybot&#39;s Expert]](https://osu.ppy.sh/beatmapset/1344871) - `2785319` ~ [**osu!direct**](osu://b/2785319)
 
-- [BeatConnect](https://beatconnect.io/b/1191853) • [NeriNyan](https://api.nerinyan.moe/d/1191853) • [Chimu.moe](https://api.chimu.moe/v1/download/1191853)
+- [BeatConnect](https://beatconnect.io/b/1344871) • [NeriNyan](https://api.nerinyan.moe/d/1344871) • [Chimu.moe](https://api.chimu.moe/v1/download/1344871)
 
 ```
-!mp map 2540064
+!mp map 2785319
+```
+
+
+> `NM3` - [Juvenile - technoplanet [Extra]](https://osu.ppy.sh/beatmapset/1280204) - `2659369` ~ [**osu!direct**](osu://b/2659369)
+
+- [BeatConnect](https://beatconnect.io/b/1280204) • [NeriNyan](https://api.nerinyan.moe/d/1280204) • [Chimu.moe](https://api.chimu.moe/v1/download/1280204)
+
+```
+!mp map 2659369
 ```
 
 
@@ -66,21 +66,21 @@
 ---
 
 
-> `HD1` - [City Lights feat. EVO+, Jinmenusagi (Zekk Remix) - HyperJuice [Reminiscence]](https://osu.ppy.sh/beatmapset/663220) - `1639734` ~ [**osu!direct**](osu://b/1639734)
+> `HD1` - [Gokuaku no Hana - onoken feat. Misaki [Acno x Mysty&#39;s Expert]](https://osu.ppy.sh/beatmapset/1941899) - `4043041` ~ [**osu!direct**](osu://b/4043041)
 
-- [BeatConnect](https://beatconnect.io/b/663220) • [NeriNyan](https://api.nerinyan.moe/d/663220) • [Chimu.moe](https://api.chimu.moe/v1/download/663220)
-
-```
-!mp map 1639734
-```
-
-
-> `HD2` - [can&#39;t hide your love - Kola Kid [Can]](https://osu.ppy.sh/beatmapset/39732) - `126470` ~ [**osu!direct**](osu://b/126470)
-
-- [BeatConnect](https://beatconnect.io/b/39732) • [NeriNyan](https://api.nerinyan.moe/d/39732) • [Chimu.moe](https://api.chimu.moe/v1/download/39732)
+- [BeatConnect](https://beatconnect.io/b/1941899) • [NeriNyan](https://api.nerinyan.moe/d/1941899) • [Chimu.moe](https://api.chimu.moe/v1/download/1941899)
 
 ```
-!mp map 126470
+!mp map 4043041
+```
+
+
+> `HD2` - [Boot - paraoka feat. haru*nya [Another]](https://osu.ppy.sh/beatmapset/1649456) - `3366722` ~ [**osu!direct**](osu://b/3366722)
+
+- [BeatConnect](https://beatconnect.io/b/1649456) • [NeriNyan](https://api.nerinyan.moe/d/1649456) • [Chimu.moe](https://api.chimu.moe/v1/download/1649456)
+
+```
+!mp map 3366722
 ```
 
 
@@ -93,21 +93,21 @@
 ---
 
 
-> `HR1` - [Alice in Misanthrope -Ensei Alice- - LeaF [Uberzolik&#39;s Insane]](https://osu.ppy.sh/beatmapset/782989) - `1644003` ~ [**osu!direct**](osu://b/1644003)
+> `HR1` - [L2M (feat. Kelsey Kuan) - City Girl [Gloom]](https://osu.ppy.sh/beatmapset/1668789) - `3407969` ~ [**osu!direct**](osu://b/3407969)
 
-- [BeatConnect](https://beatconnect.io/b/782989) • [NeriNyan](https://api.nerinyan.moe/d/782989) • [Chimu.moe](https://api.chimu.moe/v1/download/782989)
-
-```
-!mp map 1644003
-```
-
-
-> `HR2` - [Melos - Wednesday Campanella [Run]](https://osu.ppy.sh/beatmapset/967776) - `2025224` ~ [**osu!direct**](osu://b/2025224)
-
-- [BeatConnect](https://beatconnect.io/b/967776) • [NeriNyan](https://api.nerinyan.moe/d/967776) • [Chimu.moe](https://api.chimu.moe/v1/download/967776)
+- [BeatConnect](https://beatconnect.io/b/1668789) • [NeriNyan](https://api.nerinyan.moe/d/1668789) • [Chimu.moe](https://api.chimu.moe/v1/download/1668789)
 
 ```
-!mp map 2025224
+!mp map 3407969
+```
+
+
+> `HR2` - [Kurokami Midareshi Shura to Narite - Muramasa Qualia [acno&#39;s Extra]](https://osu.ppy.sh/beatmapset/1906993) - `3960916` ~ [**osu!direct**](osu://b/3960916)
+
+- [BeatConnect](https://beatconnect.io/b/1906993) • [NeriNyan](https://api.nerinyan.moe/d/1906993) • [Chimu.moe](https://api.chimu.moe/v1/download/1906993)
+
+```
+!mp map 3960916
 ```
 
 
@@ -120,21 +120,21 @@
 ---
 
 
-> `DT1` - [henrietta (goreshit &#39;dreambreak&#39; mix) - goreshit [Love Song]](https://osu.ppy.sh/beatmapset/1148444) - `2397739` ~ [**osu!direct**](osu://b/2397739)
+> `DT1` - [Korogaru Iwa, Kimi ni Asa ga Furu - kessoku band [Spotlight]](https://osu.ppy.sh/beatmapset/1916915) - `3955510` ~ [**osu!direct**](osu://b/3955510)
 
-- [BeatConnect](https://beatconnect.io/b/1148444) • [NeriNyan](https://api.nerinyan.moe/d/1148444) • [Chimu.moe](https://api.chimu.moe/v1/download/1148444)
-
-```
-!mp map 2397739
-```
-
-
-> `DT2` - [Fu Yun Ben Lang - Zeng Zhihao [Insane]](https://osu.ppy.sh/beatmapset/89673) - `243644` ~ [**osu!direct**](osu://b/243644)
-
-- [BeatConnect](https://beatconnect.io/b/89673) • [NeriNyan](https://api.nerinyan.moe/d/89673) • [Chimu.moe](https://api.chimu.moe/v1/download/89673)
+- [BeatConnect](https://beatconnect.io/b/1916915) • [NeriNyan](https://api.nerinyan.moe/d/1916915) • [Chimu.moe](https://api.chimu.moe/v1/download/1916915)
 
 ```
-!mp map 243644
+!mp map 3955510
+```
+
+
+> `DT2` - [Super Luminal - S2TB Recording [Hard]](https://osu.ppy.sh/beatmapset/1620087) - `3312640` ~ [**osu!direct**](osu://b/3312640)
+
+- [BeatConnect](https://beatconnect.io/b/1620087) • [NeriNyan](https://api.nerinyan.moe/d/1620087) • [Chimu.moe](https://api.chimu.moe/v1/download/1620087)
+
+```
+!mp map 3312640
 ```
 
 
@@ -147,12 +147,12 @@
 ---
 
 
-> `TB1` - [PLANET//SHAPER - Camellia [Collab]](https://osu.ppy.sh/beatmapset/346853) - `765525` ~ [**osu!direct**](osu://b/765525)
+> `TB1` - [Tregedy / Alucard - Eternal Melody [The Blasphemy of Betrayal]](https://osu.ppy.sh/beatmapset/1333252) - `2773548` ~ [**osu!direct**](osu://b/2773548)
 
-- [BeatConnect](https://beatconnect.io/b/346853) • [NeriNyan](https://api.nerinyan.moe/d/346853) • [Chimu.moe](https://api.chimu.moe/v1/download/346853)
+- [BeatConnect](https://beatconnect.io/b/1333252) • [NeriNyan](https://api.nerinyan.moe/d/1333252) • [Chimu.moe](https://api.chimu.moe/v1/download/1333252)
 
 ```
-!mp map 765525
+!mp map 2773548
 ```
 
 

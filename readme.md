@@ -1,7 +1,7 @@
 # Rapid Monthly osu! Tournament #88 1v1 30k-70k
 
 > tournament data updated @ `Mon, 27 Nov 2023 16:23:03 UTC`  
-> pool data updated @ `Mon, 25 Dec 2023 20:17:16 UTC`
+> pool data updated @ `Mon, 01 Jan 2024 22:16:04 UTC`
 
 ## Links
 

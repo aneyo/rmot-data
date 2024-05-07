@@ -61,7 +61,7 @@ jobs:
         uses: jaywcjlove/markdown-to-html-cli@main
         with:
           source: readme.md
-          output: index.html
+          output: ./public/index.html
           github-corners: https://github.com/aneyo/rmot-data
 
       - name: Deploy data

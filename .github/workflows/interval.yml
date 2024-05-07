@@ -60,7 +60,7 @@ jobs:
       - name: Render markdown data
         uses: jaywcjlove/markdown-to-html-cli@main
         with:
-          source: readme.md
+          source: ./public/readme.md
           output: ./public/index.html
           github-corners: https://github.com/aneyo/rmot-data
 

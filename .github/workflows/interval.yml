@@ -25,7 +25,7 @@ jobs:
         with:
           ref: data
           path: ./public
-          
+
       - name: Copy archived data to public dir
         run: cp -R ./.history/. ./public
 
@@ -33,7 +33,7 @@ jobs:
         uses: pnpm/action-setup@v2
         with:
           version: 8
-        
+
       - name: Use node.js 18
         uses: actions/setup-node@v4
         with:
@@ -56,6 +56,13 @@ jobs:
 
       - name: Generate readme file
         run: node ./tools/generate/readme.js
+
+      - name: Render markdown data
+        uses: jaywcjlove/markdown-to-html-cli@main
+        with:
+          source: readme.md
+          output: index.html
+          github-corners: https://github.com/aneyo/rmot-data
 
       - name: Deploy data
         uses: peaceiris/actions-gh-pages@v3

@@ -21,29 +21,16 @@
 
 ## Mappool
 
+<%_ if(true){} _%>
+| | Map | ID | Command | Download |
+| --- | --- | --- | ------- | -------- |
 <%_ const mods = Object.keys(pool.pool); _%>
 <%_ for(let m = 0; m < mods.length; m++) { _%>
 <%_ const mod = mods[m]; _%>
-
-### <%= mod.toUpperCase() %>
-
-```
-!mp mods <%= resolveSlot(mod) %>
-```
-
----
-
+| | | | `!mp mods <%= resolveSlot(mod) %>` |
 <%_ for(let i = 0; i < pool.pool[mod].length; i++) { _%>
 <%_ const map = pool.pool[mod][i] _%>
-
-> `<%= mod.toUpperCase() + (i+1) %>` - [<%= map.title %> - <%= map.artist %> [<%= map.version %>]](<%= generateDownloadLink(map, 4) %>) - `<%= map.beatmap_id %>` ~ [**osu!direct**](<%= generateDownloadLink(map, 0) %>)
-
-- [BeatConnect](<%= generateDownloadLink(map, 1) %>) • [NeriNyan](<%= generateDownloadLink(map, 2)  %>) • [Chimu.moe](<%= generateDownloadLink(map, 3) %>)
-
-```
-!mp map <%= map.beatmap_id %>
-```
-
+| **<%= mod.toUpperCase() + (i+1) %>** | [<%= map.title %> - <%= map.artist %> [<%= map.version %>]](<%= generateDownloadLink(map, 4) %>) | `<%= map.beatmap_id %>` | `!mp map <%= map.beatmap_id %>` | [BeatConnect](<%= generateDownloadLink(map, 1) %>) \| [NeriNyan](<%= generateDownloadLink(map, 2)  %>) \| [Chimu.moe](<%= generateDownloadLink(map, 3) %>) |
 <%_ } _%>
 <%_ } _%>
 

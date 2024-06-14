@@ -1,5 +1,9 @@
 # rmot data repo
 
+> [!WARNING]
+> since rmot93 new staff form block broke my script.  
+> i'll fix everyting later, my workspace is a bit of mess rn so yeah
+
 > everything here was coded in one day by sleep-deprived @aneyo  
 > _update: i broke my sleeping schedule_
 

@@ -18,10 +18,10 @@ jobs:
 
     steps:
       - name: Copy this repo
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
 
       - name: Copy data branch into public dir
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
         with:
           ref: data
           path: ./public
@@ -30,7 +30,7 @@ jobs:
         run: cp -R ./.history/. ./public
 
       - name: Install pnpm
-        uses: pnpm/action-setup@v2
+        uses: pnpm/action-setup@v4
         with:
           version: 8
 

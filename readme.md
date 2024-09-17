@@ -1,20 +1,20 @@
-# Rapid Monthly osu! Tournament #96 1v1 30k-70k
+# Rapid Monthly osu! Tournament #97 1v1 30k-70k
 
-> tournament data updated @ `Sun, 28 Jul 2024 16:23:04 UTC`  
-> pool data updated @ `Mon, 16 Sep 2024 01:41:05 UTC`
+> tournament data updated @ `Tue, 17 Sep 2024 01:14:24 UTC`  
+> pool data updated @ `Tue, 17 Sep 2024 01:14:24 UTC`
 
 ## Links
 
-[**Forum Post**](https://osu.ppy.sh/community/forums/topics/1955314) | [**Discord Server**](https://discord.gg/9sKe7nF) | [**Stream**](https://www.twitch.tv/rapid_tournaments) | [**Bracket**](https://challonge.com/rmosutourney95)
+[**Forum Post**](https://osu.ppy.sh/community/forums/topics/1978583) | [**Discord Server**](https://discord.gg/9sKe7nF) | [**Stream**](https://www.twitch.tv/rapid_tournaments) | [**Bracket**](https://challonge.com/rmosutourney97)
 
 ## Schedule
 
 ### [**Check current UTC/GMT time**](https://www.utctime.net)
 
-- `Sun, 28 Jul 2024 16:06:42 UTC` - registration start
-- `Sat, 10 Aug 2024 22:00:00 UTC` - registration end
-- `Thu, 01 Jan 1970 00:00:00 UTC` - bracket shuffle
-- `Thu, 01 Jan 1970 00:00:00 UTC` - start of the tournament
+- `Mon, 16 Sep 2024 22:49:41 UTC` - registration start
+- `Fri, 27 Sep 2024 22:00:00 UTC` - registration end
+- `Sat, 28 Sep 2024 14:50:00 UTC` - bracket shuffle
+- `Sat, 28 Sep 2024 15:00:00 UTC` - start of the tournament
 - _add ~30 minutes to each round after that_
 
 
@@ -23,20 +23,20 @@
 | | Map | ID | Command | Download |
 | --- | --- | --- | ------- | -------- |
 | | | | `!mp mods 0` |
-| **NM1** | [GENESIS BEYOND THE BEGINNING - Falcom Sound Team jdk [Insane]](https://osu.ppy.sh/beatmapset/1032441) | `2223546` | `!mp map 2223546` | [BeatConnect](https://beatconnect.io/b/1032441) \| [NeriNyan](https://api.nerinyan.moe/d/1032441) \| [Chimu.moe](https://api.chimu.moe/v1/download/1032441) |
-| **NM2** | [The 89&#39;s Momentum - MYUKKE. [flake&#39;s Extra]](https://osu.ppy.sh/beatmapset/2106075) | `4419241` | `!mp map 4419241` | [BeatConnect](https://beatconnect.io/b/2106075) \| [NeriNyan](https://api.nerinyan.moe/d/2106075) \| [Chimu.moe](https://api.chimu.moe/v1/download/2106075) |
-| **NM3** | [Valley of the Vale - Twilight Force [Dcs&#39; Extra]](https://osu.ppy.sh/beatmapset/1913010) | `4403746` | `!mp map 4403746` | [BeatConnect](https://beatconnect.io/b/1913010) \| [NeriNyan](https://api.nerinyan.moe/d/1913010) \| [Chimu.moe](https://api.chimu.moe/v1/download/1913010) |
+| **NM1** | [Fuyu no Hanashi - Given [Elcheer&#39;s Extra]](https://osu.ppy.sh/beatmapset/1401056) | `3316856` | `!mp map 3316856` | [BeatConnect](https://beatconnect.io/b/1401056) \| [NeriNyan](https://api.nerinyan.moe/d/1401056) \| [Chimu.moe](https://api.chimu.moe/v1/download/1401056) |
+| **NM2** | [Marisa ni Taihen na Yaku de Hako ni Saremashita - IOSYS [Suukantsu]](https://osu.ppy.sh/beatmapset/2068755) | `4328469` | `!mp map 4328469` | [BeatConnect](https://beatconnect.io/b/2068755) \| [NeriNyan](https://api.nerinyan.moe/d/2068755) \| [Chimu.moe](https://api.chimu.moe/v1/download/2068755) |
+| **NM3** | [over the top - xi [uri&#39;s extra]](https://osu.ppy.sh/beatmapset/2072719) | `4343206` | `!mp map 4343206` | [BeatConnect](https://beatconnect.io/b/2072719) \| [NeriNyan](https://api.nerinyan.moe/d/2072719) \| [Chimu.moe](https://api.chimu.moe/v1/download/2072719) |
 | | | | `!mp mods 8` |
-| **HD1** | [Koukishin Yuusen - O-LIFE.JP [Misuzu&#39;s Extra]](https://osu.ppy.sh/beatmapset/219355) | `522992` | `!mp map 522992` | [BeatConnect](https://beatconnect.io/b/219355) \| [NeriNyan](https://api.nerinyan.moe/d/219355) \| [Chimu.moe](https://api.chimu.moe/v1/download/219355) |
-| **HD2** | [Alice - Ryokuoushoku Shakai [Extra]](https://osu.ppy.sh/beatmapset/1812255) | `3717471` | `!mp map 3717471` | [BeatConnect](https://beatconnect.io/b/1812255) \| [NeriNyan](https://api.nerinyan.moe/d/1812255) \| [Chimu.moe](https://api.chimu.moe/v1/download/1812255) |
+| **HD1** | [Where Do I Belong - Infected Mushroom [Expert]](https://osu.ppy.sh/beatmapset/959439) | `2008690` | `!mp map 2008690` | [BeatConnect](https://beatconnect.io/b/959439) \| [NeriNyan](https://api.nerinyan.moe/d/959439) \| [Chimu.moe](https://api.chimu.moe/v1/download/959439) |
+| **HD2** | [Mousou Express - Sengoku Nadeko (CV: Hanazawa Kana) [Jounzaphore&#39;s Collab Extra]](https://osu.ppy.sh/beatmapset/1034108) | `2162140` | `!mp map 2162140` | [BeatConnect](https://beatconnect.io/b/1034108) \| [NeriNyan](https://api.nerinyan.moe/d/1034108) \| [Chimu.moe](https://api.chimu.moe/v1/download/1034108) |
 | | | | `!mp mods 16` |
-| **HR1** | [Ryuu to Sakura Miko - Hatsuki Yura [AIR&#39;s Extra]](https://osu.ppy.sh/beatmapset/962172) | `2018363` | `!mp map 2018363` | [BeatConnect](https://beatconnect.io/b/962172) \| [NeriNyan](https://api.nerinyan.moe/d/962172) \| [Chimu.moe](https://api.chimu.moe/v1/download/962172) |
-| **HR2** | [ChaserXX - HuMeR [KKip&#39;s Another]](https://osu.ppy.sh/beatmapset/930846) | `2066790` | `!mp map 2066790` | [BeatConnect](https://beatconnect.io/b/930846) \| [NeriNyan](https://api.nerinyan.moe/d/930846) \| [Chimu.moe](https://api.chimu.moe/v1/download/930846) |
+| **HR1** | [Sweet Dreams (11t dnb mix) - Kana Nishino [Doorfin&#39;s Extra]](https://osu.ppy.sh/beatmapset/499488) | `1079698` | `!mp map 1079698` | [BeatConnect](https://beatconnect.io/b/499488) \| [NeriNyan](https://api.nerinyan.moe/d/499488) \| [Chimu.moe](https://api.chimu.moe/v1/download/499488) |
+| **HR2** | [uen - Shounen Radio [ent&#39;s Smiling Another]](https://osu.ppy.sh/beatmapset/2110774) | `4493815` | `!mp map 4493815` | [BeatConnect](https://beatconnect.io/b/2110774) \| [NeriNyan](https://api.nerinyan.moe/d/2110774) \| [Chimu.moe](https://api.chimu.moe/v1/download/2110774) |
 | | | | `!mp mods 64` |
-| **DT1** | [Never Wanted To Dance - Mindless Self Indulgence [StarCastler&#39;s Insane]](https://osu.ppy.sh/beatmapset/830569) | `2440262` | `!mp map 2440262` | [BeatConnect](https://beatconnect.io/b/830569) \| [NeriNyan](https://api.nerinyan.moe/d/830569) \| [Chimu.moe](https://api.chimu.moe/v1/download/830569) |
-| **DT2** | [worldenddominator - zts [insane]](https://osu.ppy.sh/beatmapset/2136537) | `4496550` | `!mp map 4496550` | [BeatConnect](https://beatconnect.io/b/2136537) \| [NeriNyan](https://api.nerinyan.moe/d/2136537) \| [Chimu.moe](https://api.chimu.moe/v1/download/2136537) |
+| **DT1** | [Money and the Power - Kid Ink [Farewell]](https://osu.ppy.sh/beatmapset/1861425) | `3827176` | `!mp map 3827176` | [BeatConnect](https://beatconnect.io/b/1861425) \| [NeriNyan](https://api.nerinyan.moe/d/1861425) \| [Chimu.moe](https://api.chimu.moe/v1/download/1861425) |
+| **DT2** | [Koko Soko (AKIBA KOUBOU Eurobeat Remix) - SMiLE.dk [Insane]](https://osu.ppy.sh/beatmapset/2191580) | `4635748` | `!mp map 4635748` | [BeatConnect](https://beatconnect.io/b/2191580) \| [NeriNyan](https://api.nerinyan.moe/d/2191580) \| [Chimu.moe](https://api.chimu.moe/v1/download/2191580) |
 | | | | `!mp mods freemod` |
-| **TB1** | [last fortune (pocotan Remix) - fripSide [Extra]](https://osu.ppy.sh/beatmapset/995800) | `2083029` | `!mp map 2083029` | [BeatConnect](https://beatconnect.io/b/995800) \| [NeriNyan](https://api.nerinyan.moe/d/995800) \| [Chimu.moe](https://api.chimu.moe/v1/download/995800) |
+| **TB1** | [squartatrice - gmtn. vs. kozato (fw. LUZE) [Skystar&#39;s Descent]](https://osu.ppy.sh/beatmapset/679272) | `1436329` | `!mp map 1436329` | [BeatConnect](https://beatconnect.io/b/679272) \| [NeriNyan](https://api.nerinyan.moe/d/679272) \| [Chimu.moe](https://api.chimu.moe/v1/download/679272) |
 
 ---
 

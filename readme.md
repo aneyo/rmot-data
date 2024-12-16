@@ -1,7 +1,7 @@
 # Rapid Monthly osu! Tournament #100 1v1 30k-70k
 
 > tournament data updated @ `Mon, 02 Dec 2024 14:21:11 UTC`  
-> pool data updated @ `Mon, 09 Dec 2024 14:21:51 UTC`
+> pool data updated @ `Mon, 16 Dec 2024 16:29:10 UTC`
 
 ## Links
 

@@ -60,7 +60,7 @@ jobs:
       - name: Render markdown data
         uses: ZacJW/markdown-html-action@1.2.0
         with:
-          input_files: '["./public/readme.md"]'
+          input_files: '[["./public/readme.md"]]'
           output_files: '["./public/index.html"]'
           
       - name: Deploy data

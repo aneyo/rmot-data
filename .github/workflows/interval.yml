@@ -58,13 +58,11 @@ jobs:
         run: node ./tools/generate/readme.js
 
       - name: Render markdown data
-        uses: jaywcjlove/markdown-to-html-cli@main
+        uses: ZacJW/markdown-html-action@1.2.0
         with:
-          source: ./public/readme.md
-          output: ./public/index.html
-          corners: false
-          # github-corners: https://github.com/aneyo/rmot-data
-
+          input_files: '["./public/readme.md"]'
+          output_files: '["./public/index.html"]'
+          
       - name: Deploy data
         uses: peaceiris/actions-gh-pages@v3
         with:

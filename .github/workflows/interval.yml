@@ -62,7 +62,8 @@ jobs:
         with:
           source: ./public/readme.md
           output: ./public/index.html
-          github-corners: https://github.com/aneyo/rmot-data
+          corners: false
+          # github-corners: https://github.com/aneyo/rmot-data
 
       - name: Deploy data
         uses: peaceiris/actions-gh-pages@v3
